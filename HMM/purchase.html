@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    
+<script type="text/javascript">
+function displayResult()
+{
+    //alert("checking");
+       var sum=0;
+   if(document.getElementById("checkbox1").checked==true){
+       
+       var s1= document.getElementById("c1").value;
+      // alert(s1);
+       sum=sum + parseInt(s1);
+      // alert(sum);
+       
+   }
+   if(document.getElementById("checkbox2").checked==true){
+        var s2= document.getElementById("c2").value;
+      // alert(s2);
+       sum=sum + parseInt(s2);
+       
+   }
+   if(document.getElementById("checkbox3").checked==true){
+        var s3= document.getElementById("c3").value;
+       //alert(s3);
+       sum=sum + parseInt(s3);
+      // alert(sum);
+       
+   }
+   if(document.getElementById("checkbox4").checked==true){
+        
+       var s4= document.getElementById("c4").value;
+       //alert(s4);
+       sum=sum + parseInt(s4);
+   }
+   if(document.getElementById("checkbox5").checked==true){
+        
+      var s5= document.getElementById("c5").value;
+       //alert(s5);
+       sum=sum + parseInt(s5);
+   }
+   if(document.getElementById("checkbox6").checked==true){
+        
+         var s6= document.getElementById("c6").value;
+      // alert(s6);
+       sum=sum + parseInt(s6);
+   }
+   if(document.getElementById("checkbox7").checked==true){
+        
+      var s7= document.getElementById("c7").value;
+      // alert(s7);
+       sum=sum + parseInt(s7);
+   }
+     document.getElementById("s1").value=sum;
+        document.getElementById("cart").disabled = true;
+        document.getElementById("pay").disabled = false;
+         document.getElementById("checkbox1").disabled = true;
+          document.getElementById("checkbox2").disabled = true;
+           document.getElementById("checkbox3").disabled = true;
+            document.getElementById("checkbox4").disabled = true;
+             document.getElementById("checkbox5").disabled = true;
+              document.getElementById("checkbox6").disabled = true;
+                document.getElementById("checkbox7").disabled = true;
+                alert("Products added to cart. Pay Now!")
+    }
+
+</script>
+
+<body bgcolor="#FFFF66">
+    <form action="purchase.jsp" method="post">
+<table border="1" align="center">
+
+  <caption>Purchasing items</caption>
+  <tr>
+    <th>ITEM</th>
+    <th>PRICE</th>
+    <th>PURCHASE</th>
+  </tr>
+  <tr>
+    <td>BOOK</td>
+    <td ><input type="text" id="c1" name="username" value="200" disabled=""></td>
+    <td><input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox"></td>
+    
+  </tr>
+  <tr>
+    <td>MOBILE</td>
+    <td> <input type="text" id="c2" name="username" value="10000" disabled=""></td>
+    <td><input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox"></td>
+  </tr>
+<tr>
+    <td>PENDRIVE</td>
+    <td> <input type="text" id="c3" name="username" value="500" disabled=""></td>
+    <td><input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox"></td>
+  </tr>
+<tr>
+    <td>SHIRT</td>
+    <td><input type="text" id="c4" name="username" value="300" disabled=""></td>
+    <td><input type="checkbox" id="checkbox4" name="checkbox4" value="checkbox"></td>
+  </tr>
+<tr>
+    <td>SCHOOL BAG</td>
+    <td> <input type="text" id="c5" name="username" value="50" disabled=""></td>
+   <td><input type="checkbox" id="checkbox5" name="checkbox5" value="checkbox"></td>
+  </tr>
+<tr>
+    <td>PENCIL BOX</td>
+    <td ><input type="text" id="c6" name="username" value="400" disabled=""></td>
+   <td><input type="checkbox" id="checkbox6" name="checkbox6" value="checkbox"></td>
+  </tr>
+<tr>
+    <td>CALCULATOR</td>
+    <td ><input type="text" id="c7" name="username" value="100" disabled=""></td>
+   <td><input type="checkbox" id="checkbox7" name="checkbox7" value="checkbox"></td>
+  </tr>
+
+<tr>
+	<td>TOTAL</td>
+        <td><input type="text" id="s1" name="s1" ></td>
+        
+	</tr>
+</table>
+<br>
+<br>
+<div align="center">
+    
+    
+    <input type="button" id="cart" onclick="displayResult()" value="Add To Cart">
+    &nbsp; &nbsp;&nbsp;&nbsp; <input type="submit" id="pay" disabled value="Pay Now ">
+</div>
+    </form>
+</body>
+</html>
+
