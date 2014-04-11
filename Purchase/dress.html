@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+    var cat= document.getElementById("c1").name;
+    function displayResult()
+{
+    alert("checking");
+       var sum=0;
+   if(document.getElementById("checkbox1").checked==true){
+       
+       var s1= document.getElementById("c1").value;
+       alert(s1);
+       sum=sum + parseInt(s1);
+       
+       
+   }
+   if(document.getElementById("checkbox2").checked==true){
+        var s2= document.getElementById("c2").value;
+       alert(s2);
+       sum=sum + parseInt(s2);
+	   
+       
+   }
+   if(document.getElementById("checkbox3").checked==true){
+        var s3= document.getElementById("c3").value;
+       alert(s3);
+       sum=sum + parseInt(s3);
+       alert(sum);
+       
+   }
+   if(document.getElementById("checkbox4").checked==true){
+        
+       var s4= document.getElementById("c4").value;
+       alert(s4);
+       sum=sum + parseInt(s4);
+   }
+   
+        document.getElementById("s1").value=sum;
+        document.getElementById("cart").disabled = true;
+        document.getElementById("pay").disabled = false;
+        document.getElementById("checkbox1").disabled = true;
+        document.getElementById("checkbox2").disabled = true;
+        document.getElementById("checkbox3").disabled = true;
+            document.getElementById("checkbox4").disabled = true;
+            
+		     alert("Products added to cart. Pay Now!")
+    }
+
+</script>
+<body bgcolor="#CCFF99">
+<form action="purchase.jsp" method="post">
+    <input type="hidden" name="category" value="1">  
+<table width="100%" border="0">
+     
+    <tr>
+<td colspan="2">
+<h1>DRESSES</h1>
+</td>
+</tr>
+
+<tr>
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/dress1.jpg"width="200" height="200">
+ <br> <input type="text" id="c1" name="category1" value="1680.00" disabled="">
+    <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox">
+</td>
+
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/dress3.jpg"width="200" height="200">
+  <br> <input type="text" id="c2" name="category1" value="2000.00" disabled="">
+    <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox">
+</td>
+
+
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/ch.jpg"width="200" height="200">
+<br> <input type="text" id="c3" name="category1" value="980.00" disabled="">
+    <input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox">
+</td>
+
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/dress2.jpg"width="200" height="200">
+<br> <input type="text" id="c4" name="category1" value="1080.00" disabled="">
+    <input type="checkbox" id="checkbox4" name="checkbox4" value="checkbox">
+</td>
+</tr>
+
+
+<tr>
+	<td>TOTAL
+        <input type="text" id="s1" name="s1" ></td>
+        
+	</tr>
+        <div align="center">
+    
+    
+    <input type="button" id="cart" onclick="displayResult()" value="Add To Cart">
+    &nbsp; &nbsp;&nbsp;&nbsp; <input type="submit" id="pay" disabled value="Pay Now ">
+</div>
+</table>	
+</form>
+</body>
+</html>

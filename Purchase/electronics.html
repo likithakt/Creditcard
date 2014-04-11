@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+function displayResult()
+{
+    alert("checking");
+       var sum=0;
+   
+   if(document.getElementById("checkbox5").checked==true){
+        
+      var s5= document.getElementById("c5").value;
+       alert(s5);
+       sum=sum + parseInt(s5);
+   }
+   if(document.getElementById("checkbox6").checked==true){
+        
+         var s6= document.getElementById("c6").value;
+       alert(s6);
+       sum=sum + parseInt(s6);
+   }
+   if(document.getElementById("checkbox7").checked==true){
+        
+      var s7= document.getElementById("c7").value;
+       alert(s7);
+       sum=sum + parseInt(s7);
+   }
+   if(document.getElementById("checkbox8").checked==true){
+        
+      var s8= document.getElementById("c8").value;
+       alert(s8);
+       sum=sum + parseInt(s8);
+   }
+  
+        document.getElementById("s1").value=sum;
+        document.getElementById("cart").disabled = true;
+        document.getElementById("pay").disabled = false;
+        
+            document.getElementById("checkbox5").disabled = true;
+            document.getElementById("checkbox6").disabled = true;
+            document.getElementById("checkbox7").disabled = true;
+	    document.getElementById("checkbox8").disabled = true;
+            
+		     alert("Products added to cart. Pay Now!")
+    }
+
+</script>
+<body bgcolor="#CCFF99">
+<form action="purchase.jsp" method="post">
+     <input type="hidden" name="category" value="3">  
+<table width="100%" border="0">
+
+<tr>
+<td>
+<h1>
+ELECTRONICS
+</td>
+</h1></tr>
+
+
+<tr>
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/pd.jpg"width="200" height="200">
+  <br> <input type="text" id="c5" name="category3" value="680.00" disabled="">
+    <input type="checkbox" id="checkbox5" name="checkbox5" value="checkbox">
+</td>
+
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/cm.jpg"width="200" height="200">
+  <br> <input type="text" id="c6" name="category3" value="15000.00" disabled="">
+    <input type="checkbox" id="checkbox6" name="checkbox6" value="checkbox">
+</td>
+
+
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/cl.jpg"width="200" height="200">
+<br> <input type="text" id="c7" name="category3" value="650.00" disabled="">
+    <input type="checkbox" id="checkbox7" name="checkbox7" value="checkbox">
+</td>
+
+<td style="background-color:#CCFF99;width:50px;">
+<img src="images/images.jpg"width="200" height="200">
+<br> <input type="text" id="c8" name="category3" value="26700.00" disabled="">
+    <input type="checkbox" id="checkbox8" name="checkbox8" value="checkbox">
+</td>
+</tr>
+<div align="center">
+    
+    
+    <input type="button" id="cart" onclick="displayResult()" value="Add To Cart">
+    &nbsp; &nbsp;&nbsp;&nbsp; <input type="submit" id="pay" disabled value="Pay Now ">
+</div>
+<tr> </tr>
+ <tr> </tr>
+ <tr> </tr>
+ <tr> </tr>
+ <tr> </tr>
+<tr>
+	<td>TOTAL
+        <input type="text" id="s1" name="s1" ></td>
+        
+	</tr>
+</table>	
+</form>
+</body>
+</html>
